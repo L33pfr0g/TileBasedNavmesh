@@ -11,5 +11,12 @@ This script creates the colliders for each tile and does the required manipulati
 correctly. Must be applied to the Grid object and requires a GameObject with a NavMeshSurface component 
 in the scene.
 
+### GameController
+This script is garbage. Literally thrown together to make everything work. I recommend actually reading
+the doc on NavMeshes and NavMeshAgents. It works though so ¯\_(ツ)_/¯
+
 ### Other 
 For best results, make sure the radius of your agent is half of the cell size.
+The "surfaces" game object is rotated -90 degrees to align with the tilemap. This is required or it won't
+work.
+
