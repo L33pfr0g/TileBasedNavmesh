@@ -8,4 +8,10 @@ using System;
 [CreateAssetMenu(fileName = "New Blocking Tile", menuName = "Tiles/Blocking Tile")]
 public class BlockingTile : TileBase
 {
+	public Sprite sprite;
+
+	public override void GetTileData(Vector3Int position, ITilemap tilemap, ref TileData tileData)
+	{
+		tileData.sprite = sprite;
+	}
 }

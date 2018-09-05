@@ -1,0 +1,9 @@
+.vs/
+.vscode/
+ProjectSettings/
+Library/
+obj
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+NavMeshTilemap.sln
+TileBasedNavmesh.sln
