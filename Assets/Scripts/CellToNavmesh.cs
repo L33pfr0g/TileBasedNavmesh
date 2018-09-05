@@ -15,11 +15,10 @@ namespace TileBasedNavMesh
 		private Grid grid;
 		private Tilemap map;
 		// Use this for initialization
-		void Start()
+		public void Init()
 		{
 			grid = GetComponent<Grid>();
 			map = GetComponentInChildren<Tilemap>();
-
 			InitColliders();
 			BakeNavMesh();
 		}
@@ -52,7 +51,7 @@ namespace TileBasedNavMesh
 					surface.GetComponent<NavMeshSurface>().useGeometry = NavMeshCollectGeometry.PhysicsColliders;
 					BoxCollider col = surface.GetComponent<BoxCollider>();
 					col.size = new Vector3(grid.cellSize.x, grid.cellSize.y, height);
-					surface.transform.position = GetActualPosition(pos);
+					surface.transform.position = map.GetCellCenterWorld(pos);
 					surface.transform.SetParent(surfaces);
 				}
 			}
